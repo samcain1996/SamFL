@@ -14,36 +14,29 @@ class FieldScene: SKScene {
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
-    private var field : SKSpriteNode?
+    private var scroll = false
+    private var scrollDir: CGFloat = 1
     
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
         
-        self.field = self.childNode(withName: "//field") as? SKSpriteNode
-        if let field = self.field {
-            field.alpha = 1.0
-        }
+        let cameraNode = SKCameraNode()
+            
+        self.addChild(cameraNode)
+        self.camera = cameraNode
+        
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-       
+        for touch in touches {
+            scroll = !scroll
+            if (!scroll) { continue }
+            
+            scrollDir = touch.location(in: self.view).y > self.size.height / 2 ? -8 : 8
+        }
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
- 
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
@@ -59,6 +52,12 @@ class FieldScene: SKScene {
         // Update entities
         for entity in self.entities {
             entity.update(deltaTime: dt)
+        }
+    
+        if (scroll) {
+            if let pos = self.camera?.position {
+                self.camera?.position = CGPoint(x: pos.x, y: pos.y + scrollDir)
+            }
         }
         
         self.lastUpdateTime = currentTime
