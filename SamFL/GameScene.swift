@@ -65,6 +65,12 @@ class GameScene: SKScene {
             }
         }
         
+        if let view = self.view {
+            var fieldScene = FieldScene(fileNamed: "FieldScene")
+            fieldScene?.scaleMode = .aspectFill
+            view.presentScene(fieldScene)
+        }
+        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     

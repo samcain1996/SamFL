@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,11 @@
 		7062FF9E2AFE7FD8004B50E9 /* SamFLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062FF9D2AFE7FD8004B50E9 /* SamFLUITestsLaunchTests.swift */; };
 		7062FFAD2AFE8A55004B50E9 /* SamFL.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7062FFAC2AFE8A55004B50E9 /* SamFL.mp3 */; };
 		70C2E6982AFEB34400FD5803 /* Sam2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C2E6972AFEB34400FD5803 /* Sam2.png */; };
+		70C2E6AA2AFECE7500FD5803 /* Sam2App.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C2E6A72AFECE7500FD5803 /* Sam2App.png */; };
+		70C2E6AB2AFECE7500FD5803 /* EndZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C2E6A82AFECE7500FD5803 /* EndZone.png */; };
+		70C2E6AC2AFECE7500FD5803 /* Field.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C2E6A92AFECE7500FD5803 /* Field.png */; };
+		70C2E6AE2AFECEA200FD5803 /* FieldScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70C2E6AD2AFECEA200FD5803 /* FieldScene.sks */; };
+		70C2E6B02AFECEDC00FD5803 /* FieldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2E6AF2AFECEDC00FD5803 /* FieldScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		7062FF9D2AFE7FD8004B50E9 /* SamFLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamFLUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7062FFAC2AFE8A55004B50E9 /* SamFL.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SamFL.mp3; sourceTree = "<group>"; };
 		70C2E6972AFEB34400FD5803 /* Sam2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sam2.png; path = Assets.xcassets/Sam2.png; sourceTree = "<group>"; };
+		70C2E6A72AFECE7500FD5803 /* Sam2App.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sam2App.png; path = Assets.xcassets/Sam2App.png; sourceTree = "<group>"; };
+		70C2E6A82AFECE7500FD5803 /* EndZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EndZone.png; path = Assets.xcassets/EndZone.png; sourceTree = "<group>"; };
+		70C2E6A92AFECE7500FD5803 /* Field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Field.png; path = Assets.xcassets/Field.png; sourceTree = "<group>"; };
+		70C2E6AD2AFECEA200FD5803 /* FieldScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FieldScene.sks; sourceTree = "<group>"; };
+		70C2E6AF2AFECEDC00FD5803 /* FieldScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,9 @@
 		7062FF762AFE7FD8004B50E9 /* SamFL */ = {
 			isa = PBXGroup;
 			children = (
+				70C2E6A82AFECE7500FD5803 /* EndZone.png */,
+				70C2E6A92AFECE7500FD5803 /* Field.png */,
+				70C2E6A72AFECE7500FD5803 /* Sam2App.png */,
 				70C2E6972AFEB34400FD5803 /* Sam2.png */,
 				7062FFAC2AFE8A55004B50E9 /* SamFL.mp3 */,
 				7062FF772AFE7FD8004B50E9 /* AppDelegate.swift */,
@@ -116,6 +129,8 @@
 				7062FF812AFE7FD8004B50E9 /* Main.storyboard */,
 				7062FF842AFE7FD8004B50E9 /* Assets.xcassets */,
 				7062FF862AFE7FD8004B50E9 /* LaunchScreen.storyboard */,
+				70C2E6AD2AFECEA200FD5803 /* FieldScene.sks */,
+				70C2E6AF2AFECEDC00FD5803 /* FieldScene.swift */,
 			);
 			path = SamFL;
 			sourceTree = "<group>";
@@ -217,7 +232,7 @@
 				};
 			};
 			buildConfigurationList = 7062FF6F2AFE7FD8004B50E9 /* Build configuration list for PBXProject "SamFL" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -241,12 +256,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C2E6AE2AFECEA200FD5803 /* FieldScene.sks in Resources */,
 				7062FFAD2AFE8A55004B50E9 /* SamFL.mp3 in Resources */,
 				7062FF832AFE7FD8004B50E9 /* Main.storyboard in Resources */,
+				70C2E6AA2AFECE7500FD5803 /* Sam2App.png in Resources */,
 				7062FF7A2AFE7FD8004B50E9 /* GameScene.sks in Resources */,
+				70C2E6AB2AFECE7500FD5803 /* EndZone.png in Resources */,
 				70C2E6982AFEB34400FD5803 /* Sam2.png in Resources */,
 				7062FF852AFE7FD8004B50E9 /* Assets.xcassets in Resources */,
 				7062FF882AFE7FD8004B50E9 /* LaunchScreen.storyboard in Resources */,
+				70C2E6AC2AFECE7500FD5803 /* Field.png in Resources */,
 				7062FF7C2AFE7FD8004B50E9 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7062FF7E2AFE7FD8004B50E9 /* GameScene.swift in Sources */,
+				70C2E6B02AFECEDC00FD5803 /* FieldScene.swift in Sources */,
 				7062FF802AFE7FD8004B50E9 /* GameViewController.swift in Sources */,
 				7062FF782AFE7FD8004B50E9 /* AppDelegate.swift in Sources */,
 			);
@@ -475,7 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -505,7 +525,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
