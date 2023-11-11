@@ -17,6 +17,8 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var samFace : SKSpriteNode?
     
+    public var start : () -> Void = {}
+    
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
@@ -40,19 +42,6 @@ class GameScene: SKScene {
         }
     }
     
-    
-    func startGame() {
-        
-        if let view = self.view {
-            if let fieldScene = FieldScene(fileNamed: "FieldScene") {
-                fieldScene.scaleMode = .aspectFill
-                fieldScene.entities = entities
-                fieldScene.graphs = graphs
-                view.presentScene(fieldScene)
-            }
-        }
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if let samFace = self.samFace {
@@ -60,7 +49,7 @@ class GameScene: SKScene {
                 samText.run(SKAction.init(named: "sam_zoom")!)
                 samFace.run(SKAction.init(named: "sam_zoom")!)
                 samFace.run(SKAction.sequence([SKAction.playSoundFileNamed("SamFL_short.mp3", waitForCompletion: false),
-                                               SKAction.wait(forDuration: 5)]), completion: startGame)
+                                               SKAction.wait(forDuration: 5)]), completion: start)
             }
         }
     }
